@@ -130,8 +130,9 @@ Como evolução futura, os testes poderiam ser automatizados utilizando ferramen
 
 ---
 
-Documentação detalhada dos casos de teste:
-(https://www.notion.so/Desafio-T-cnico-Lacrei-Sa-de-31ed978c3bea80ccaac1d4514def8d93?source=copy_link)
+# Documentação detalhada dos casos de teste:
+
+https://www.notion.so/Desafio-T-cnico-Lacrei-Sa-de-31ed978c3bea80ccaac1d4514def8d93?source=copy_link
 
 ---
 
