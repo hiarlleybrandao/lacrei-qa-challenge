@@ -47,9 +47,9 @@ Configuração utilizada:
 
 lacrei-qa-challenge
 
-test-cases → Casos de teste
-bug-reports → Registro de bugs
-evidencias → Evidências da execução
+/test-cases → Casos de teste
+/bug-reports → Registro de bugs
+/evidencias → Evidências da execução
 README.md → Documentação do desafio
 
 
@@ -104,7 +104,7 @@ Cada bug contém:
 
 As evidências da execução dos testes podem ser encontradas na pasta:
 
-evidencias
+/evidencias
 
 ---
 
