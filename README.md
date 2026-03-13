@@ -100,6 +100,56 @@ Cada bug contém:
 
 ---
 
+# Registro de Teste de Desempenho
+
+Simulação de carga realizada para validar a estabilidade e o tempo de resposta em operações críticas.
+
+Ferramenta utilizada: Apache JMeter 5.6.3.
+
+Cenário: Simulação de 30 usuários simultâneos acessando o endpoint de cadastro.
+
+Configuração: 30 threads com 30 segundos de ramp-up.
+
+Resultados obtidos:
+
+**Taxa de Erro: 0,00% (Estabilidade garantida sob carga).**
+
+**Tempo Médio de Resposta: 209ms (Alta performance).**
+
+90% Line: 204ms.
+
+**Conclusão: O ambiente de staging demonstrou robustez, mantendo tempos de resposta excelentes mesmo com múltiplos acessos simultâneos.**
+
+Evidência de Performance:
+
+---
+
+# Registro de Teste de Acessibilidade
+
+Auditoria realizada para garantir que a plataforma atenda aos pilares de inclusão da Lacrei Saúde.
+
+Ferramentas: Google Lighthouse, DevTools e NVDA.
+
+Resultados Lighthouse:
+
+**Nota de Acessibilidade: 96/100 ✅**
+
+**Legibilidade e Contraste: Aprovados com nota superior a 90.**
+
+Resultados de Inspeção Manual (Teclado e Leitor de Tela):
+
+**Navegação via Teclado: Identificada falha crítica onde a tecla Enter não ativa botões e a tecla Espaço executa scroll indevido.**
+
+**Leitor de Tela (NVDA): O sistema identifica rótulos (labels), mas não anuncia automaticamente mensagens de erro de validação (falta de aria-live).**
+
+Insights e Melhorias:
+
+**Proposta de revisão da semântica HTML para garantir operabilidade via teclado.**
+
+**Implementação de alertas dinâmicos para melhorar a experiência de usuários com deficiência visual.**
+
+---
+
 # Evidências
 
 As evidências da execução dos testes podem ser encontradas na pasta:
