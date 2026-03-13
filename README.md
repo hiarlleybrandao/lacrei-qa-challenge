@@ -120,8 +120,6 @@ Resultados obtidos:
 
 **Conclusão: O ambiente de staging demonstrou robustez, mantendo tempos de resposta excelentes mesmo com múltiplos acessos simultâneos.**
 
-Evidência de Performance:
-
 ---
 
 # Registro de Teste de Acessibilidade
