@@ -8,11 +8,11 @@ Este documento centraliza as falhas reais identificadas durante o ciclo de teste
 
 | ID | Categoria | Título do Bug | Impacto | Severidade | Link |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **BUG-001** | **UX / Mobile** | Botão "Perfil" flutuando na tela após navegação | 🟠 Alto | Alta | [#4](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/4) |
-| **BUG-002** | **Interface** | Avatar padrão do médico exibido incorretamente | 🔵 Baixo | Baixa | [#5](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/5) |
-| **BUG-003** | **Interface / Mobile** | Borda branca lateral (Overflow de layout) | 🟡 Médio | Normal | [#6](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/6) |
-| **BUG-004** | **Funcional / Acess.** | Busca não retorna resultados ao pressionar "Enter" | 🟠 Alto | Alta | [#7](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/7) |
-| **BUG-005** | **Acessibilidade** | Mensagens de erro não anunciadas pelo NVDA | 🔴 Crítico | Alta | [#3](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/3) |
+| **BUG-001** | **Acessibilidade** | Mensagens de erro não anunciadas pelo NVDA | 🔴 Crítico | Alta | [#3](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/3) |
+| **BUG-002** | **UX / Mobile** | Botão "Perfil" flutuando na tela após navegação | 🟠 Alto | Alta | [#4](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/4) |
+| **BUG-003** | **Interface** | Avatar padrão do médico exibido incorretamente | 🔵 Baixo | Baixa | [#5](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/5) |
+| **BUG-004** | **Interface / Mobile** | Borda branca lateral (Overflow de layout) | 🟡 Médio | Normal | [#6](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/6) |
+| **BUG-005** | **Funcional / Acess.** | Busca não retorna resultados ao pressionar "Enter" | 🟠 Alto | Alta | [#7](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues/7) |
 
 ---
 
