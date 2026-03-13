@@ -84,10 +84,10 @@ lacrei-qa-challenge
 
 ---
 
-🔗 Links Importantes
-Documentação Detalhada (Notion): Acessar Notion
+# 🔗 Links Importantes
 
-URL do Sistema: Lacrei Saúde - Staging
+- **Documentação Detalhada (Notion):** [Acessar Notion](https://www.notion.so/Desafio-T-cnico-Lacrei-Sa-de-31ed978c3bea80ccaac1d4514def8d93?source=copy_link)
+- **URL do Sistema:** [Lacrei Saúde - Staging](https://paciente-staging.lacreisaude.com.br)
 
 ---
 
