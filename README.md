@@ -177,7 +177,7 @@ Identificamos falhas críticas de acessibilidade e experiência do usuário (UX)
 | **BUG-002** | Tecla "Espaço" executa scroll em vez de ativar botões | **Alta** | 🔴 Aberto |
 | **BUG-003** | Erros de validação não anunciados pelo NVDA (Aria-live) | **Crítica** | 🔴 Aberto |
 
-> **Acesse os detalhes técnicos, passos para reprodução e evidências na aba de [Issues do GitHub](./issues).**
+> **[Acesse as Issues aqui](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues)**
 
 ### 💡 Sugestões de Melhoria
 * **Feedback de Validação:** Implementar o atributo `aria-live="polite"` nos containers de erro para que usuários de tecnologias assistivas sejam notificados em tempo real.
