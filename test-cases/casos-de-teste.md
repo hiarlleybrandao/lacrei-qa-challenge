@@ -26,7 +26,7 @@ Este documento detalha os cenários de teste escritos em BDD (Behavior Driven De
     * **Dado** que o usuário preenche o formulário com um e-mail já existente
     * **Quando** clica em "Cadastrar"
     * **Então** o sistema deve exibir a mensagem: "Já existe um usuário cadastrado com este endereço de e-mail."
-* **Status:** ❌ Falhou (Comportamento inesperado registrado).
+* **Status:** ✅ Passou.
 
 **CT-006 – Cadastro com senhas diferentes**
 * **Descrição:** Validar impedimento de cadastro quando os campos "Senha" e "Confirme sua senha" divergem.
@@ -34,7 +34,7 @@ Este documento detalha os cenários de teste escritos em BDD (Behavior Driven De
     * **Dado** que os campos de senha contêm valores diferentes
     * **Quando** o usuário tenta avançar
     * **Então** o sistema deve exibir a mensagem: "Senhas incompatíveis, tente novamente."
-* **Status:** ❌ Falhou.
+* **Status:** ✅ Passou.
 
 **CT-007 – Cadastro sem preenchimento de e-mail e senha**
 * **Descrição:** Validar que o sistema impede o envio do formulário com campos obrigatórios vazios.
@@ -42,7 +42,7 @@ Este documento detalha os cenários de teste escritos em BDD (Behavior Driven De
     * **Dado** que o usuário deixa os campos de e-mail e senha em branco
     * **Quando** clica em "Cadastrar"
     * **Então** o sistema deve destacar os campos e exibir: "Este campo é obrigatório."
-* **Status:** ❌ Falhou.
+* **Status:** ✅ Passou.
 
 ---
 
