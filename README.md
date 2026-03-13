@@ -12,9 +12,9 @@ Os testes foram realizados nos seguintes fluxos da aplicação:
 
 - Cadastro de usuário ✅ 
 - Busca de profissionais de saúde ✅ 
-- Recuperação de senha ❌
-- Validação de campos obrigatórios ❌
-- Validação de dados inconsistentes ❌
+- Recuperação de senha ✅ 
+- Validação de campos obrigatórios ✅ 
+- Validação de dados inconsistentes ✅ 
 
 ---
 
@@ -145,6 +145,23 @@ Insights e Melhorias:
 **Proposta de revisão da semântica HTML para garantir operabilidade via teclado.**
 
 **Implementação de alertas dinâmicos para melhorar a experiência de usuários com deficiência visual.**
+
+---
+# Registro de Teste de Responsividade
+
+Validação da adaptação do layout em diferentes resoluções de tela para garantir a usabilidade em diversos dispositivos.
+
+**Mobile (Simulado em 360px):**
+
+**Resultado: ✅ Perfeito.**
+
+Observações: O formulário ocupa a largura total da tela, botões mantêm o tamanho adequado para o toque e não há surgimento de barra de rolagem horizontal.
+
+**Desktop (Simulado em 1280px e 1440px):**
+
+**Resultado: ✅ Perfeito.**
+
+Observações: O conteúdo permanece centralizado, com bom aproveitamento dos espaços em branco e elementos do cabeçalho (Header) devidamente posicionados.
 
 ---
 
