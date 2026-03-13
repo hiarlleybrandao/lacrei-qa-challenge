@@ -1,236 +1,95 @@
 # Desafio Técnico QA - Lacrei Saúde ⚕️
 
-Este repositório contém a execução do desafio técnico de Quality Assurance da empresa **Lacrei Saúde**.
-
-O objetivo foi validar funcionalidades principais da aplicação, documentar casos de teste e registrar evidências da execução.
+Este repositório contém a execução do desafio técnico de Quality Assurance para a **Lacrei Saúde**. O projeto abrange desde a estratégia de testes manuais e documentação de bugs até a implementação de uma suíte de automação E2E com integração contínua.
 
 [![Execução de Testes Cypress](https://github.com/hiarlleybrandao/lacrei-qa-challenge/actions/workflows/main.yml/badge.svg)](https://github.com/hiarlleybrandao/lacrei-qa-challenge/actions/workflows/main.yml)
 
 ---
 
-# Escopo dos Testes
+# 🤖 Automação de Testes (E2E)
 
-Os testes foram realizados nos seguintes fluxos da aplicação:
+O projeto conta com uma suíte de testes automatizados para o fluxo crítico de cadastro, utilizando as melhores práticas de mercado para garantir estabilidade e rapidez no feedback.
 
-- Cadastro de usuário ✅ 
-- Busca de profissionais de saúde ✅ 
-- Recuperação de senha ✅ 
-- Validação de campos obrigatórios ✅ 
-- Validação de dados inconsistentes ✅ 
+- **Ferramenta:** Cypress 13+
+- **Linguagem:** JavaScript
+- **Padronização:** Gherkin (BDD) via Cucumber
+- **CI/CD:** GitHub Actions (Execução automática a cada push/pull request)
 
----
+### Diferenciais da Automação:
+* **Resiliência (Hydration Handling):** Implementada lógica para ignorar exceções conhecidas de hidratação do React (`Minified React error #418/423`), permitindo que os testes prossigam mesmo com instabilidades na versão de staging.
+* **Seletores Estáveis:** Priorização de atributos funcionais para evitar quebras por mudanças de CSS dinâmico.
+* **Idempotência:** Configuração de geração de dados únicos para permitir múltiplas execuções sem conflito de e-mails duplicados.
 
-# Tipos de Teste Realizados
-
-Durante o desafio foram aplicados:
-
-- Testes funcionais
-- Testes exploratórios
-- Testes de validação de campos
-- Testes negativos
+### 🚀 Como rodar a automação localmente
+1. **Clone o repositório:** `git clone https://github.com/hiarlleybrandao/lacrei-qa-challenge.git`
+2. **Instale as dependências:** `npm install`
+3. **Abra o Cypress:** `npx cypress open` ou via terminal: `npx cypress run`
 
 ---
 
-# Ambiente de Testes
+# 📋 Estratégia e Escopo dos Testes
 
-URL do sistema:
+Os testes validaram os seguintes fluxos principais:
+- Cadastro de usuário (Manual e Automatizado) ✅
+- Busca de profissionais de saúde ✅
+- Recuperação de senha ✅
+- Validação de campos obrigatórios e inconsistentes ✅
 
-https://paciente-staging.lacreisaude.com.br
-
-Configuração utilizada:
-
-- Navegador: Google Chrome
-- Sistema Operacional: Windows
-- Dispositivo: Mobile
-
----
-
-# Estrutura do Repositório
-
-lacrei-qa-challenge
-
-/test-cases → Casos de teste
-/bug-reports → Registro de bugs
-/evidencias → Evidências da execução
-README.md → Documentação do desafio
-
+### Tipos de Teste Aplicados:
+- Testes Funcionais, Exploratórios, Negativos e de Regressão.
 
 ---
 
-# Casos de Teste
+# 📊 Registros e Auditorias Especializadas
 
-Foram documentados os seguintes casos de teste:
+### ⚡ Teste de Desempenho (JMeter)
+- **Cenário:** 30 usuários simultâneos no endpoint de cadastro.
+- **Resultado:** Taxa de erro de **0,00%** e tempo médio de resposta de **209ms**.
+- **Conclusão:** Ambiente demonstra robustez e alta performance sob carga moderada.
 
-CT-001 – Cadastro de novo usuário  
-CT-002 – Buscar profissional de saúde  
-CT-003 – Recuperação de senha  
-CT-004 – Cadastro com e-mail já cadastrado  
-CT-005 – Cadastro com senhas diferentes  
-CT-006 – Cadastro sem e-mail e sem senha
+### ♿ Teste de Acessibilidade (Lighthouse & NVDA)
+- **Score Lighthouse:** 96/100.
+- **Pontos de Atenção:** Identificada falha na operabilidade via teclado (Enter/Espaço) e falta de `aria-live` para notificações de erro, impactando usuários de leitores de tela.
 
-Os detalhes de cada teste estão disponíveis na pasta **test-cases**.
-
----
-
-# Execução dos Testes
-
-Os testes foram executados manualmente seguindo os cenários documentados.
-
-Para cada teste foram registrados:
-
-- Pré-condições
-- Passos do cenário
-- Resultado esperado
-- Resultado Obtido
-- Evidências
+### 📱 Teste de Responsividade
+- **Mobile & Desktop:** Layout aprovado e adaptável em resoluções de 320px a 1440px.
 
 ---
 
-# Registro de Bugs
+# 🐞 Gestão de Defeitos (Issues)
 
-Os bugs encontrados durante os testes foram documentados na pasta:
-
-bug-reports
-
-Cada bug contém:
-
-- descrição
-- passos para reprodução
-- resultado esperado
-- resultado obtido
-- evidência
-
----
-
-# Registro de Teste de Desempenho
-
-Simulação de carga realizada para validar a estabilidade e o tempo de resposta em operações críticas.
-
-Ferramenta utilizada: Apache JMeter 5.6.3.
-
-Cenário: Simulação de 30 usuários simultâneos acessando o endpoint de cadastro.
-
-Configuração: 30 threads com 30 segundos de ramp-up.
-
-Resultados obtidos:
-
-**Taxa de Erro: 0,00% (Estabilidade garantida sob carga).**
-
-**Tempo Médio de Resposta: 209ms (Alta performance).**
-
-90% Line: 204ms.
-
-**Conclusão: O ambiente de staging demonstrou robustez, mantendo tempos de resposta excelentes mesmo com múltiplos acessos simultâneos.**
-
----
-
-# Registro de Teste de Acessibilidade
-
-Auditoria realizada para garantir que a plataforma atenda aos pilares de inclusão da Lacrei Saúde.
-
-Ferramentas: Google Lighthouse, DevTools e NVDA.
-
-Resultados Lighthouse:
-
-**Nota de Acessibilidade: 96/100 ✅**
-
-**Legibilidade e Contraste: Aprovados com nota superior a 90.**
-
-Resultados de Inspeção Manual (Teclado e Leitor de Tela):
-
-**Navegação via Teclado: Identificada falha crítica onde a tecla Enter não ativa botões e a tecla Espaço executa scroll indevido.**
-
-**Leitor de Tela (NVDA): O sistema identifica rótulos (labels), mas não anuncia automaticamente mensagens de erro de validação (falta de aria-live).**
-
-Insights e Melhorias:
-
-**Proposta de revisão da semântica HTML para garantir operabilidade via teclado.**
-
-**Implementação de alertas dinâmicos para melhorar a experiência de usuários com deficiência visual.**
-
----
-# Registro de Teste de Responsividade
-
-Validação da adaptação do layout em diferentes resoluções de tela para garantir a usabilidade em diversos dispositivos.
-
-Mobile (Simulado em 320px a 600px):
-
-Resultado: ✅ Aprovado.
-
-Observações: O formulário e os textos se adaptam corretamente às larguras padrão de mercado. A legibilidade foi mantida em todos os dispositivos móveis testados.
-
-Desktop (Simulado em 1280px e 1440px):
-
-Resultado: ✅ Aprovado.
-
-Observações: Conteúdo centralizado e elementos de interface bem distribuídos.
-
----
-
-# Registro de Bugs e Melhorias
-
-Identificamos falhas críticas de acessibilidade e experiência do usuário (UX) que foram devidamente registradas como Issues neste repositório:
-
-Identificamos falhas críticas de acessibilidade e experiência do usuário (UX) que foram devidamente registradas como **Issues** neste repositório:
+As falhas críticas identificadas foram registradas como **Issues** neste repositório para facilitar o rastreio e correção.
 
 | ID | Título do Bug | Severidade | Status |
 | :--- | :--- | :--- | :--- |
 | **BUG-001** | Botão de submissão não responde à tecla "Enter" | **Crítica** | 🔴 Aberto |
 | **BUG-002** | Tecla "Espaço" executa scroll em vez de ativar botões | **Alta** | 🔴 Aberto |
-| **BUG-003** | Erros de validação não anunciados pelo NVDA (Aria-live) | **Crítica** | 🔴 Aberto |
+| **BUG-003** | Erros de validação não anunciados (Aria-live) | **Crítica** | 🔴 Aberto |
 
-> **[Acesse as Issues aqui](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues)**
-
-### 💡 Sugestões de Melhoria
-* **Feedback de Validação:** Implementar o atributo `aria-live="polite"` nos containers de erro para que usuários de tecnologias assistivas sejam notificados em tempo real.
-* **Event Listeners de Teclado:** Revisar os componentes de botão para garantir que aceitem eventos de `keydown` (Enter/Space) além do `click` padrão.
+> **[Visualize os detalhes das Issues aqui](https://github.com/hiarlleybrandao/lacrei-qa-challenge/issues)**
 
 ---
 
-# Evidências
+# 📂 Estrutura do Repositório
 
-As evidências da execução dos testes podem ser encontradas na pasta:
-
-/evidencias
-
----
-
-# Checklist de Segurança
-
-Durante os testes foram analisados:
-
-- validação de campos obrigatórios
-- validação de e-mail duplicado
-- validação de senha
-- fluxo de recuperação de senha
-- autenticação de usuário
+```text
+lacrei-qa-challenge
+├── .github/workflows  → Pipeline de CI/CD (GitHub Actions)
+├── cypress/           → Testes automatizados (Features e Steps)
+├── test-cases/        → Documentação dos cenários manuais
+├── bug-reports/       → Detalhamento de bugs encontrados
+├── evidencias/        → Prints e vídeos das execuções
+└── README.md          → Documentação principal
+```
 
 ---
 
----
+🔗 Links Importantes
+Documentação Detalhada (Notion): Acessar Notion
 
-# 🤖 Automação de Testes (E2E)
-
-O projeto conta com uma suíte de testes automatizados para o fluxo crítico de cadastro, utilizando as melhores práticas de mercado.
-
-- **Ferramenta:** Cypress 13+
-- **Linguagem:** JavaScript e Gherkin (BDD)
-- **Framework:** Cucumber (Cypress-Cucumber-Preprocessor)
-- **CI/CD:** GitHub Actions integrado para execução a cada `push` ou `pull_request`.
-
-### Diferenciais da Automação:
-* **Tratamento de Hydration:** Implementada lógica para ignorar exceções nativas do React (`#418`, `#423`), garantindo a estabilidade da execução.
-* **Seletores Robustos:** Uso de atributos estáveis e expressões regulares para evitar quebras por alterações de layout (CSS dinâmico).
-* **Pipeline de CI:** O status da execução pode ser acompanhado pelo Badge no topo deste README.
-  
----
-
-# Documentação detalhada dos casos de teste:
-
-https://www.notion.so/Desafio-T-cnico-Lacrei-Sa-de-31ed978c3bea80ccaac1d4514def8d93?source=copy_link
+URL do Sistema: Lacrei Saúde - Staging
 
 ---
 
-# Autor
-
-Hiarlley Brandão, projeto desenvolvido como prática de Quality Assurance.
+Autor,
+Francisco Hiarlley Brandão Quality Assurance Engineer.
