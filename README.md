@@ -4,6 +4,8 @@ Este repositório contém a execução do desafio técnico de Quality Assurance 
 
 O objetivo foi validar funcionalidades principais da aplicação, documentar casos de teste e registrar evidências da execução.
 
+[![Execução de Testes Cypress](https://github.com/hiarlleybrandao/lacrei-qa-challenge/actions/workflows/main.yml/badge.svg)](https://github.com/hiarlleybrandao/lacrei-qa-challenge/actions/workflows/main.yml)
+
 ---
 
 # Escopo dos Testes
@@ -205,14 +207,22 @@ Durante os testes foram analisados:
 
 ---
 
-# Possível Automação de Testes
+---
 
-Como evolução futura, os testes poderiam ser automatizados utilizando ferramentas como:
+# 🤖 Automação de Testes (E2E)
 
-- Cypress
-- Playwright
-- Selenium
+O projeto conta com uma suíte de testes automatizados para o fluxo crítico de cadastro, utilizando as melhores práticas de mercado.
 
+- **Ferramenta:** Cypress 13+
+- **Linguagem:** JavaScript e Gherkin (BDD)
+- **Framework:** Cucumber (Cypress-Cucumber-Preprocessor)
+- **CI/CD:** GitHub Actions integrado para execução a cada `push` ou `pull_request`.
+
+### Diferenciais da Automação:
+* **Tratamento de Hydration:** Implementada lógica para ignorar exceções nativas do React (`#418`, `#423`), garantindo a estabilidade da execução.
+* **Seletores Robustos:** Uso de atributos estáveis e expressões regulares para evitar quebras por alterações de layout (CSS dinâmico).
+* **Pipeline de CI:** O status da execução pode ser acompanhado pelo Badge no topo deste README.
+  
 ---
 
 # Documentação detalhada dos casos de teste:
