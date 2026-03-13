@@ -151,17 +151,37 @@ Insights e Melhorias:
 
 Validação da adaptação do layout em diferentes resoluções de tela para garantir a usabilidade em diversos dispositivos.
 
-**Mobile (Simulado em 360px):**
+Mobile (Simulado em 320px a 600px):
 
-**Resultado: ✅ Perfeito.**
+Resultado: ✅ Aprovado.
 
-Observações: O formulário ocupa a largura total da tela, botões mantêm o tamanho adequado para o toque e não há surgimento de barra de rolagem horizontal.
+Observações: O formulário e os textos se adaptam corretamente às larguras padrão de mercado. A legibilidade foi mantida em todos os dispositivos móveis testados.
 
-**Desktop (Simulado em 1280px e 1440px):**
+Desktop (Simulado em 1280px e 1440px):
 
-**Resultado: ✅ Perfeito.**
+Resultado: ✅ Aprovado.
 
-Observações: O conteúdo permanece centralizado, com bom aproveitamento dos espaços em branco e elementos do cabeçalho (Header) devidamente posicionados.
+Observações: Conteúdo centralizado e elementos de interface bem distribuídos.
+
+---
+
+# Registro de Bugs e Melhorias
+
+Identificamos falhas críticas de acessibilidade e experiência do usuário (UX) que foram devidamente registradas como Issues neste repositório:
+
+Identificamos falhas críticas de acessibilidade e experiência do usuário (UX) que foram devidamente registradas como **Issues** neste repositório:
+
+| ID | Título do Bug | Severidade | Status |
+| :--- | :--- | :--- | :--- |
+| **BUG-001** | Botão de submissão não responde à tecla "Enter" | **Crítica** | 🔴 Aberto |
+| **BUG-002** | Tecla "Espaço" executa scroll em vez de ativar botões | **Alta** | 🔴 Aberto |
+| **BUG-003** | Erros de validação não anunciados pelo NVDA (Aria-live) | **Crítica** | 🔴 Aberto |
+
+> **Acesse os detalhes técnicos, passos para reprodução e evidências na aba de [Issues do GitHub](./issues).**
+
+### 💡 Sugestões de Melhoria
+* **Feedback de Validação:** Implementar o atributo `aria-live="polite"` nos containers de erro para que usuários de tecnologias assistivas sejam notificados em tempo real.
+* **Event Listeners de Teclado:** Revisar os componentes de botão para garantir que aceitem eventos de `keydown` (Enter/Space) além do `click` padrão.
 
 ---
 
