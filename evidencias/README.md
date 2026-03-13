@@ -23,8 +23,8 @@ As capturas de tela abaixo comprovam as falhas reais registradas e documentadas 
 Para garantir a cobertura total e a reprodutibilidade dos bugs, os testes foram executados nos seguintes cenários:
 
 * **Ambiente Desktop:**
-    * **SO:** Windows 11
-    * **Navegador:** Chrome (Versão mais recente)
+    * **SO:** Windows 10
+    * **Navegador:** Chrome Versão 145.0.7632.160 (Versão oficial) 64 bits
     * **Foco:** Performance (JMeter), auditoria de código (Lighthouse) e validação de acessibilidade (Leitores de tela).
 
 * **Ambiente Mobile (Simulado):**
