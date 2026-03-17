@@ -92,4 +92,4 @@ lacrei-qa-challenge
 ---
 
 Autor,
-Francisco Hiarlley Brandão. | Quality Assurance Engineer.
+Hiarlley Brandão. | Quality Assurance Engineer.
