@@ -79,6 +79,62 @@ Este documento detalha os cenários de teste escritos em BDD (Behavior Driven De
 * **Descrição:** Validar o fluxo de recuperação de conta via e-mail.
 * **Cenário:**
     * **Dado** que o usuário clica em "Esqueci minha senha"
-    * **Quando** informa um e-mail válido e clica em "Enviar"
+    * **Quando** o usuário informa um e-mail válido e clica em "Enviar"
     * **Então** o sistema deve enviar as instruções de recuperação para o e-mail informado.
 * **Status:** ❌ Falhou (Redirecionamento instantâneo para tela de login impedindo o processo).
+
+---
+
+## 5. Validações Negativas e Dados Inválidos (Cadastro)
+
+CT-008 – Cadastro com E-mail em formato inválido
+* **Descrição:** Validar o fluxo de cadastro com e-mail em formato inválido.
+* **Cenário:**
+    * **Dado** que o usuário insira um e-mail sem o caractere "@" (ex: hiarlley.com) ou sem domínio (ex: hiarlley@lacrei)
+    * **Quando** tenta seguir com cadastro
+    * **Então** o sistema deve exibir a mensagem: "Por favor, utilize um formato de e-mail válido. Por exemplo: email@dominio.com.br"
+ 
+CT-009 – Senha fora dos critérios de segurança
+* **Descrição:** Validar o fluxo de cadastro com senha fora dos critérios de segurança.
+* **Cenário:**
+    * **Dado** que o usuário insira uma senha muito curta (menos de 8 caracteres) ou sem caracteres especiais/números
+    * **Quando** tenta seguir com cadastro
+    * **Então** o sistema deve exibir a mensagem: "Sua senha deve atender aos seguintes critérios: 8 caracteres ou mais, 1 letra maiúscula ou mais, 1 letra minúscula ou mais, 1 número ou mais, 1 caractere especial ou mais (ex: #!*-_&)
+ 
+CT-010 – Nome/Sobrenome com caracteres inválidos
+* **Descrição:** Validar o fluxo de cadastro com "Nome" e "Sobrenome" preenchidos com caracteres inválidos 
+* **Cenário:**
+    * **Dado** que o usuário insira números ou símbolos no campo "Nome" e/ou "Sobrenome"
+    * **Quando** tenta seguir com cadastro
+    * **Então** o sistema deve exibir a mensagem: "Digite um nome válido" e "Digite um sobrenome válido"
+ 
+---
+
+## 6. Fluxos Alternativos (Jornada do Usuário)
+
+CT-011 – Busca por Profissional sem resultados
+* **Descrição:** Validar busca de profissional com atributos inexistentes
+* **Cenário:**
+    * **Dado** que o usuário pesquise por um termo inexistente (ex: "Médico de Marte")
+    * **Quando** clico na lupa
+    * **Então** o sistema deve exibir uma mensagem amigável: "Não encontramos o que você procura."
+ 
+CT-012 – Navegação via "Voltar" no Onboarding (Pós-cadastro)
+* **Descrição:** Validar navegação no onboarding 
+* **Cenário:**
+    * **Dado** que o usuário está na etapa de "Gênero" no pós-cadastro
+    * **Quando** clica no botão "Voltar"
+    * **Então** o sistema deve manter os dados preenchidos na etapa anterior (Pronome) para que o usuário possa editá-los.
+ 
+---
+
+## 7. Testes de Segurança/Privacidade
+
+CT-013 – Acesso direto a URLs restritas
+* **Descrição:** Validar que um usuário não logado não consegue acessar a tela de "Buscar profissional" digitando a URL diretamente. 
+* **Cenário:**
+    * **Dado** que o usuário não está autenticado no sistema
+    * **Quando** tenta acessar a URL /saude/paciente/profissional/busca
+    * **Então** o sistema deve redirecionar o usuário para a tela de Login.
+
+
