@@ -100,7 +100,7 @@ CT-009 – Senha fora dos critérios de segurança
 * **Cenário:**
     * **Dado** que o usuário insira uma senha muito curta (menos de 8 caracteres) ou sem caracteres especiais/números
     * **Quando** tenta seguir com cadastro
-    * **Então** o sistema deve exibir a mensagem: "Sua senha deve atender aos seguintes critérios: 8 caracteres ou mais, 1 letra maiúscula ou mais, 1 letra minúscula ou mais, 1 número ou mais, 1 caractere especial ou mais (ex: #!*-_&)
+    * **Então** o sistema deve exibir a mensagem: "Sua senha deve atender aos seguintes critérios: 8 caracteres ou mais, 1 letra maiúscula ou mais, 1 letra minúscula ou mais, 1 número ou mais, 1 caractere especial ou mais (ex: #!*-_&)".
 * **Status:** ✅ Passou.
  
 CT-010 – Nome/Sobrenome com caracteres inválidos
@@ -126,7 +126,7 @@ CT-011 – Busca por Profissional sem resultados
 CT-012 – Navegação via "Voltar" no Onboarding (Pós-cadastro)
 * **Descrição:** Validar navegação no onboarding 
 * **Cenário:**
-    * **Dado** que o usuário está na etapa de "Gênero" no pós-cadastro
+    * **Dado** que o usuário está na etapa de "Etnia" no pós-cadastro
     * **Quando** clica no botão "Voltar"
     * **Então** o sistema deve manter os dados preenchidos na etapa anterior (Pronome) para que o usuário possa editá-los.
 * **Status:** ✅ Passou.
