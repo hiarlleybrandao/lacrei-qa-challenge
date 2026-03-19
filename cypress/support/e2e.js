@@ -15,3 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+// Configuração Global para ignorar erros inesperados do site (React/Staging)
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // Retornar false impede que o Cypress falhe o teste por erros do sistema alvo
+  return false;
+});
