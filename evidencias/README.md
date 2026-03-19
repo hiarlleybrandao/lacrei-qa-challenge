@@ -5,8 +5,8 @@ Este diretório centraliza as comprovações técnicas dos testes realizados na 
 ---
 
 ## 🚀 Performance e Acessibilidade (Relatórios)
-* **[jmeter-performance.jfif]:** Teste de carga e tempo de resposta. A plataforma apresentou uma média estável de **209ms**, indicando excelente performance de backend e baixa latência.
-* **[lighthouse-acessibilidade.jfif]:** Relatório automatizado do Google Lighthouse validando métricas de SEO, Performance e conformidade com boas práticas de Acessibilidade (WCAG).
+* **[jmeter-performance.jpg]:** Teste de carga e tempo de resposta. A plataforma apresentou uma média estável de **209ms**, indicando excelente performance de backend e baixa latência.
+* **[lighthouse-acessibilidade.jpg]:** Relatório automatizado do Google Lighthouse validando métricas de SEO, Performance e conformidade com boas práticas de Acessibilidade (WCAG).
 
 ## 📱 Evidências de Bugs (Mobile e Interface)
 As capturas de tela abaixo comprovam as falhas reais registradas e documentadas na aba de **Issues**:
