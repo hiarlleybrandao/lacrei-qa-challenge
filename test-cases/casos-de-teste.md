@@ -93,6 +93,7 @@ CT-008 – Cadastro com E-mail em formato inválido
     * **Dado** que o usuário insira um e-mail sem o caractere "@" (ex: hiarlley.com) ou sem domínio (ex: hiarlley@lacrei)
     * **Quando** tenta seguir com cadastro
     * **Então** o sistema deve exibir a mensagem: "Por favor, utilize um formato de e-mail válido. Por exemplo: email@dominio.com.br"
+* **Status:** ✅ Passou.
  
 CT-009 – Senha fora dos critérios de segurança
 * **Descrição:** Validar o fluxo de cadastro com senha fora dos critérios de segurança.
@@ -100,6 +101,7 @@ CT-009 – Senha fora dos critérios de segurança
     * **Dado** que o usuário insira uma senha muito curta (menos de 8 caracteres) ou sem caracteres especiais/números
     * **Quando** tenta seguir com cadastro
     * **Então** o sistema deve exibir a mensagem: "Sua senha deve atender aos seguintes critérios: 8 caracteres ou mais, 1 letra maiúscula ou mais, 1 letra minúscula ou mais, 1 número ou mais, 1 caractere especial ou mais (ex: #!*-_&)
+* **Status:** ✅ Passou.
  
 CT-010 – Nome/Sobrenome com caracteres inválidos
 * **Descrição:** Validar o fluxo de cadastro com "Nome" e "Sobrenome" preenchidos com caracteres inválidos 
@@ -107,6 +109,7 @@ CT-010 – Nome/Sobrenome com caracteres inválidos
     * **Dado** que o usuário insira números ou símbolos no campo "Nome" e/ou "Sobrenome"
     * **Quando** tenta seguir com cadastro
     * **Então** o sistema deve exibir a mensagem: "Digite um nome válido" e "Digite um sobrenome válido"
+* **Status:** ✅ Passou.
  
 ---
 
@@ -118,6 +121,7 @@ CT-011 – Busca por Profissional sem resultados
     * **Dado** que o usuário pesquise por um termo inexistente (ex: "Médico de Marte")
     * **Quando** clico na lupa
     * **Então** o sistema deve exibir uma mensagem amigável: "Não encontramos o que você procura."
+* **Status:** ✅ Passou.
  
 CT-012 – Navegação via "Voltar" no Onboarding (Pós-cadastro)
 * **Descrição:** Validar navegação no onboarding 
@@ -125,6 +129,7 @@ CT-012 – Navegação via "Voltar" no Onboarding (Pós-cadastro)
     * **Dado** que o usuário está na etapa de "Gênero" no pós-cadastro
     * **Quando** clica no botão "Voltar"
     * **Então** o sistema deve manter os dados preenchidos na etapa anterior (Pronome) para que o usuário possa editá-los.
+* **Status:** ✅ Passou.
  
 ---
 
@@ -136,5 +141,6 @@ CT-013 – Acesso direto a URLs restritas
     * **Dado** que o usuário não está autenticado no sistema
     * **Quando** tenta acessar a URL /saude/paciente/profissional/busca
     * **Então** o sistema deve redirecionar o usuário para a tela de Login.
+* **Status:** ✅ Passou.
 
 
